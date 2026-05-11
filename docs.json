@@ -69,8 +69,8 @@
 		"links": [],
 		"primary": {
 			"type": "button",
-			"label": "Dashboard",
-			"href": "https://dashboard.mintlify.com"
+			"label": "Open App",
+			"href": "https://liquidlogos.app"
 		}
 	},
 	"contextual": {
