@@ -1,0 +1,208 @@
+---
+title: Order Types
+description: "Understand different order execution methods"
+---
+
+## Order Types Overview
+
+LiquidLogos supports multiple order types for different trading strategies.
+
+### Market Orders
+
+**Market orders execute immediately at the current market price.**
+
+#### Use Cases
+- You want immediate execution
+- You're entering a position during high volatility
+- You're closing a position quickly
+
+#### Pros
+- Instant execution
+- Guaranteed fill
+- Simple to understand
+
+#### Cons
+- Higher slippage on large orders
+- No price guarantee (market may move between request and execution)
+
+#### Example
+```
+Price: $50,000
+You buy 1 BTC at market
+Executed at: $50,020 (best ask available)
+```
+
+### Limit Orders
+
+**Limit orders execute only at your specified price or better.**
+
+#### Use Cases
+- You want a specific entry price
+- You're trading during low liquidity
+- You want to capture a specific support/resistance level
+
+#### Pros
+- Price certainty
+- Lower slippage
+- Can set price and wait
+
+#### Cons
+- May not execute if price doesn't reach your level
+- Partial fills possible on large orders
+
+#### Example
+```
+Price: $50,000
+You place limit buy at: $49,500
+Waits for price to drop
+Executes when price reaches $49,500
+```
+
+### Stop Orders
+
+**Stop orders trigger when price reaches a level, then execute as market orders.**
+
+#### Use Cases
+- Setting stop-loss on existing positions
+- Entering on breakouts
+- Limiting losses below certain levels
+
+#### Pros
+- Automates risk management
+- Prevents emotional decisions
+- Executes on your terms
+
+#### Cons
+- Still executes as market order (slippage possible)
+- May not trigger if price gaps past your stop
+
+#### Example
+```
+You're long at $50,000
+You set stop-loss at: $48,000
+Price drops to $48,000
+Order triggers and market-sells at best available price
+```
+
+### Stop-Limit Orders
+
+**Stop-limit combines stop triggers with limit execution.**
+
+#### Use Cases
+- Protecting positions with guaranteed prices
+- Precise entry points on breakouts
+- Limiting slippage on stop orders
+
+#### Pros
+- Price protection
+- Prevents market impact
+- Precise control
+
+#### Cons
+- May not execute if price gaps past limit
+- More complex to understand
+
+#### Example
+```
+You're long at $50,000
+Set stop at $48,000 with limit at $47,800
+Price drops to $48,000, triggers order
+Only executes if price ≤ $47,800
+```
+
+## Take-Profit and Stop-Loss
+
+### Take-Profit Orders
+
+Automatically close a profitable position at your target price.
+
+**Setting up:**
+1. Open a position
+2. Go to Positions page
+3. Click **Set Take-Profit**
+4. Enter your target price
+5. Confirm
+
+When price reaches your target, the position closes at market price.
+
+### Stop-Loss Orders
+
+Limit losses by closing at a maximum loss level.
+
+**Setting up:**
+1. Open a position
+2. Go to Positions page
+3. Click **Set Stop-Loss**
+4. Enter your maximum loss price
+5. Confirm
+
+When price reaches your stop level, the position closes at market price.
+
+## Order Management
+
+### Viewing Open Orders
+
+Go to **Orders** to see:
+
+- Active limit and stop orders
+- Pending positions
+- Order history
+
+### Canceling Orders
+
+Click **Cancel** on any unfilled order to remove it. You can open a new order immediately.
+
+### Modifying Orders
+
+To change an existing order:
+
+1. Cancel the current order
+2. Create a new order with updated parameters
+
+There's no modify function; canceling and recreating is required.
+
+## Tips for Order Management
+
+1. **Use limits during low volatility** — Better prices when market is quiet
+2. **Use market orders during high volatility** — Ensure execution
+3. **Place stops immediately after entering** — Don't wait; automate your risk
+4. **Monitor partially filled orders** — You may need to cancel and resubmit
+5. **Avoid gaps** — Don't set stops/targets at psychological levels (everyone does)
+
+## Fee Implications
+
+Different order types may have different fees:
+
+- **Market orders** — May have slightly higher fees
+- **Limit orders** — May have slightly lower fees if not filled immediately
+- **Stop/Stop-limit** — Same as market once triggered
+
+Check market details for exact fee schedules.
+
+## Advanced Strategies
+
+### Scaling In
+Place multiple limit orders at different price levels to enter gradually.
+
+### Pyramiding
+Add to winning positions using limit orders at progressively higher prices.
+
+### Hedging
+Use opposite-direction orders to hedge existing positions.
+
+## Troubleshooting
+
+**Order not executing?**
+- Check your margin ratio (must have sufficient collateral)
+- Verify your limit price is competitive
+- Ensure order wasn't auto-cancelled
+
+**Order partially filled?**
+- Large orders may fill across multiple fills
+- You can cancel the unfilled remainder
+
+**Price gapped past my stop?**
+- Gap fills happen during high volatility
+- Consider tighter stops or larger stop distances
+
+For more help, visit the [Trade Terminal](/trading/trade-interface) guide.

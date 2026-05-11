@@ -1,0 +1,226 @@
+---
+title: Vault - Liquidity Provision
+description: "Earn yield by providing liquidity"
+---
+
+![Vault](/images/vault.png)
+
+## About the Vault
+
+The Vault is the liquidity backbone of LiquidLogos. Liquidity providers (LPs) deposit capital to:
+
+- **Earn fees** from trading activity
+- **Earn interest** from borrowing costs
+- **Support the protocol** by maintaining solvency
+
+## Vault Structure
+
+The Vault has two pools:
+
+### Buffer Pool
+
+Used for position margin. When traders deposit collateral, it flows into the Buffer Pool.
+
+**Function:**
+- Provides margin to traders
+- Earns trading fees
+- Exposed to moderate risk
+
+### Insurance Pool
+
+Used for liquidation coverage. Protects the protocol when traders are liquidated.
+
+**Function:**
+- Covers liquidation losses
+- Earns higher yields
+- Higher risk, higher reward
+
+## Providing Liquidity
+
+### Depositing into the Vault
+
+To become an LP and earn yield:
+
+1. Go to the **Vault** page
+2. Click **Deposit**
+3. Select asset (USDC, USDT, etc.)
+4. Choose pool (Buffer or Insurance)
+5. Enter amount
+6. Approve token transfer (first time)
+7. Confirm deposit
+8. Wait for confirmation
+
+Your LP tokens represent your share of the pool.
+
+### Withdrawal Process
+
+To withdraw your liquidity:
+
+1. Click **Withdraw**
+2. Enter the amount (or select "Max")
+3. Review the withdrawal details
+4. Confirm withdrawal
+5. Wait for blockchain confirmation
+6. Assets appear in your wallet
+
+Withdrawals may have cooldown periods during high volatility.
+
+## Earning Yields
+
+### Fee Distribution
+
+LPs earn a share of all protocol fees:
+
+- **Opening fees** — 50% to LPs
+- **Closing fees** — 50% to LPs
+- **Funding payments** — Adjustments distributed
+- **Liquidation fees** — 50% to LPs
+
+Your share is proportional to your vault deposit.
+
+### APY (Annual Percentage Yield)
+
+The Vault displays current APY for each pool:
+
+- **Buffer Pool** — Lower risk, lower yield (8-15% APY typical)
+- **Insurance Pool** — Higher risk, higher yield (15-40% APY typical)
+
+APY varies based on trading volume and market conditions.
+
+### Yield Accrual
+
+Yields accrue continuously. You can:
+
+- **Harvest** — Collect your earned fees immediately
+- **Compound** — Automatically reinvest earnings
+
+## Pool Economics
+
+### Buffer Pool
+
+**Inflows:**
+- Trader collateral deposits
+- Interest payments
+- Fee distributions
+
+**Outflows:**
+- Trader withdrawals
+- Emergency liquidation coverage
+
+**Risk Level:** Moderate
+
+### Insurance Pool
+
+**Inflows:**
+- LP deposits
+- Fee distributions
+- Protocol insurance contributions
+
+**Outflows:**
+- Liquidation losses (rare)
+- LP withdrawals
+
+**Risk Level:** Higher (but rare losses)
+
+## Risk Considerations
+
+### Buffer Pool Risks
+
+- **Liquidity risk** — Withdrawals may be delayed if many traders exit
+- **Moderate loss risk** — Unlikely but possible during extreme volatility
+- **Market risk** — Indirect exposure to trading markets
+
+### Insurance Pool Risks
+
+- **Liquidation losses** — Could lose money if liquidations exceed insurance
+- **Concentrated risk** — Loss concentrated on worst days
+- **Protocol risk** — If protocol fails, insurance pool could face losses
+
+### Risk Mitigation
+
+LiquidLogos implements:
+
+- **Multi-layer insurance** — Multiple insurance pools
+- **Diversification** — Multiple markets reduce concentration
+- **Gradual scaling** — LP limits prevent overexposure
+- **Governance controls** — Community can adjust parameters
+
+## Monitoring Your Position
+
+### Dashboard
+
+Your Vault dashboard shows:
+
+- **Total Deposited** — Your LP capital in the pool
+- **Current Value** — Current pool value of your shares
+- **Unrealized Gains** — Gains from yield accumulation
+- **APY** — Current yield rate
+- **Pool Share %** — Your percentage of total pool
+
+### Historical View
+
+See your deposit history:
+
+- Deposits and withdrawals
+- Yield earned over time
+- Performance vs benchmark
+- Pool composition
+
+## LP Best Practices
+
+1. **Start small** — Test with small deposit first
+2. **Diversify** — Split between Buffer and Insurance
+3. **Monitor APY** — Yields change with market conditions
+4. **Compound regularly** — Reinvest earnings for compounding
+5. **Long-term view** — LPs benefit from sustained trading activity
+
+## Tax Considerations
+
+<Note>
+  Yield farming may have tax implications. Consult your tax advisor for your jurisdiction.
+</Note>
+
+- Yields are typically taxable as income
+- Capital gains apply when you withdraw
+- Different jurisdictions have different rules
+- Keep records of all transactions
+
+## Emergency Scenarios
+
+### Bank Run Prevention
+
+If many LPs withdraw simultaneously:
+
+- LiquidLogos implements withdrawal cooldowns
+- Gradual withdrawal queuing may apply
+- Emergency protocols protect remaining LPs
+
+### Extreme Market Events
+
+If liquidations exceed insurance:
+
+- Protocol has multiple fallback mechanisms
+- Governance may activate emergency procedures
+- LPs may see temporary withdrawal restrictions
+
+<Tip>
+  LiquidLogos is built with multiple safeguards. Catastrophic loss is unlikely but possible.
+</Tip>
+
+## Getting Started
+
+Ready to provide liquidity?
+
+<Card
+  title="Start Earning Yield"
+  icon="coins"
+  href="/introduction/getting-started"
+>
+  Connect your wallet and deposit into the Vault.
+</Card>
+
+## Support
+
+Questions about vault mechanics?
+
+See the FAQ or contact support for detailed questions about pool economics and risk models.

@@ -1,0 +1,232 @@
+---
+title: Position Management
+description: "Monitor and manage your open positions"
+---
+
+![Positions](/images/positions.png)
+
+## Positions Page
+
+The Positions page shows all your open and historical positions with real-time P&L and risk metrics.
+
+## Open Positions
+
+Each open position displays:
+
+### Position Details
+
+- **Market** — The perpetual contract (e.g., BTC/USD)
+- **Direction** — Long or Short
+- **Size** — Number of contracts or notional value
+- **Leverage** — 1x to 100x
+- **Entry Price** — Your average entry price
+- **Current Price** — Latest market price
+
+### Risk Metrics
+
+- **Liquidation Price** — Price at which position closes
+- **Margin Used** — Collateral allocated to this position
+- **P&L** — Unrealized profit or loss
+- **P&L %** — Percentage return on this position
+
+### Actions
+
+For each position, you can:
+
+- **Close** — Exit the entire position immediately
+- **Close Partial** — Exit part of the position
+- **Set Take-Profit** — Auto-close at profit target
+- **Set Stop-Loss** — Auto-close to limit losses
+
+## Understanding Liquidation
+
+### Liquidation Price
+
+Your liquidation price is calculated as:
+
+```
+For Long Positions:
+Liquidation = Entry Price × (1 - 1 / Leverage × (1 - Maintenance %))
+
+For Short Positions:
+Liquidation = Entry Price × (1 + 1 / Leverage × (1 - Maintenance %))
+```
+
+**Example (Long 1 BTC at $50,000 with 5x leverage):**
+- Margin: $10,000
+- Maintenance margin: 5%
+- Liquidation price: ~$45,000
+
+If price drops to $45,000, your position auto-closes.
+
+### Avoiding Liquidation
+
+1. **Monitor liquidation distance** — If it's close, reduce position
+2. **Keep margin ratio high** — Stay above 200% for comfort
+3. **Use stops** — Close at a small loss rather than face liquidation
+4. **Don't over-leverage** — 1-5x leverage is safer than 50x+
+5. **Size appropriately** — Only use capital you can afford to lose
+
+## Closing Positions
+
+### Market Close
+
+Immediately close at current market price:
+
+1. Click **Close** on the position
+2. Review execution price
+3. Confirm the transaction
+4. Position closes, P&L realized
+
+### Partial Close
+
+Close part of a position:
+
+1. Click **Close Partial**
+2. Enter the amount to close
+3. Confirm the transaction
+4. Remaining position stays open
+
+### Setting Exit Targets
+
+#### Take-Profit
+
+Auto-close at your profit target:
+
+1. Click **Set Take-Profit**
+2. Enter your target price
+3. Confirm
+4. When price reaches target, position closes at market
+
+#### Stop-Loss
+
+Auto-close to limit losses:
+
+1. Click **Set Stop-Loss**
+2. Enter your stop price
+3. Confirm
+4. When price reaches stop, position closes at market
+
+## Position History
+
+Below your open positions, see your closed positions:
+
+- **Market** — The contract traded
+- **Entry/Exit** — Entry and exit prices
+- **Size** — Position notional value
+- **Realized P&L** — Profit or loss realized
+- **Duration** — How long position was held
+
+## Fees and Costs
+
+Your position incurs several fees:
+
+### Opening Fee
+Paid when you enter. Usually 0.1% of notional value.
+
+### Closing Fee
+Paid when you exit. Usually 0.1% of notional value.
+
+### Holding Fee
+Paid continuously for keeping position open. Based on:
+- Position size
+- Duration
+- Market funding rates
+
+### Liquidation Fee
+If liquidated, you pay a fee (usually 5% of position size) to liquidators.
+
+<Tip>
+  Minimize liquidation risk by closing positions before reaching danger zone.
+</Tip>
+
+## Position P&L Tracking
+
+### Unrealized P&L
+
+Your profit or loss if you closed right now:
+
+```
+Unrealized P&L = (Current Price - Entry Price) × Size × Direction
+```
+
+**Long example:**
+- Entry: $50,000
+- Current: $51,000
+- Size: 1 BTC
+- P&L: +$1,000
+
+**Short example:**
+- Entry: $50,000
+- Current: $49,000
+- Size: 1 BTC
+- P&L: +$1,000
+
+### Realized P&L
+
+Your actual profit or loss after closing and paying all fees.
+
+```
+Realized P&L = Exit Price - Entry Price - Opening Fee - Closing Fee - Holding Fees
+```
+
+## Position NFTs
+
+Each position is represented as an ERC-721 NFT. You can:
+
+- **View on blockchain** — See position details on-chain
+- **Transfer** — Send position to another wallet
+- **Sell** — Trade positions on NFT marketplaces
+
+Your position NFT is your proof of ownership and claim to P&L.
+
+## Risk Dashboard
+
+LiquidLogos shows your overall account risk:
+
+| Metric | Red Flag | Yellow Flag | Green |
+| :--- | :--- | :--- | :--- |
+| **Margin Ratio** | < 100% | 100-150% | > 150% |
+| **Largest Position** | > 50% of equity | 30-50% | < 30% |
+| **Total Leverage** | > 10x avg | 5-10x | < 5x |
+
+## Best Practices
+
+1. **Monitor daily** — Check positions every day
+2. **Set stops early** — Don't wait for bad news
+3. **Take profits** — Don't be greedy, lock wins
+4. **Size correctly** — Risk 1-2% per position maximum
+5. **Diversify** — Spread capital across markets
+6. **Track P&L** — Understand your performance over time
+
+## Advanced Position Management
+
+### Scaling In
+Add to winning positions gradually with limit orders at higher prices.
+
+### Scaling Out
+Close positions in stages to lock in profits while keeping some exposure.
+
+### Hedging
+Open opposite positions to protect against adverse moves.
+
+### Rolling
+Close old positions and open new ones at better prices.
+
+## Troubleshooting
+
+**Position shows as open but I want to close?**
+- Ensure you have sufficient collateral for transaction
+- Check your network connection
+- Try closing via manual withdraw if needed
+
+**Liquidation price changed?**
+- Funding rates or fees may have changed
+- Your margin ratio may have shifted
+- Refresh to see updated calculations
+
+**Can't close partial?**
+- Minimum position size may apply
+- You may need to close the entire position
+
+For more help, see [Getting Started](/introduction/getting-started).

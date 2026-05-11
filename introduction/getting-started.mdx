@@ -1,0 +1,120 @@
+---
+title: Getting Started
+description: "Connect your wallet and open your first position"
+---
+
+![Trade Interface](/images/trade.png)
+
+## Prerequisites
+
+To trade on LiquidLogos, you need:
+
+1. **A supported crypto wallet** (MetaMask, Rabby, WalletConnect, Coinbase Wallet)
+2. **Collateral on the supported network** (USDC, USDT, or equivalent)
+3. **Gas fees** for transactions
+
+## Step 1: Connect Your Wallet
+
+1. Navigate to [liquidlogos.app](https://liquidlogos.app)
+2. Click the **Connect Wallet** button in the top right corner
+3. Select your preferred wallet provider
+4. Review and approve the connection request in your wallet
+5. Sign the message to verify wallet ownership (this does not spend funds)
+
+## Step 2: Deposit Collateral
+
+1. Go to the **Portfolio** section
+2. Click **Deposit Collateral**
+3. Select the asset you wish to deposit (e.g., USDC)
+4. Enter the amount
+5. Approve the transaction in your wallet
+6. Wait for the transaction to confirm
+
+<Note>
+  Your collateral is held in the protocol's smart contracts. Only you can withdraw your funds.
+</Note>
+
+## Step 3: Open Your First Position
+
+1. Navigate to the **Trade** terminal
+2. Click on a market in the **Markets** tab or search by name
+3. Choose **Long** (increase price) or **Short** (decrease price)
+4. Enter your collateral amount
+5. Choose your leverage (1x to 100x)
+6. Review the entry price, liquidation price, and fees
+7. Click **Open Position**
+8. Sign the transaction in your wallet
+
+![Markets](/images/markets.png)
+
+## Understanding the Trade Terminal
+
+The trade terminal has several sections:
+
+- **Watchlist** — Markets you're monitoring
+- **Chart** — Price action and technical analysis
+- **Order Book** — Buy and sell orders
+- **Recent Trades** — Recent transaction history
+- **Order Ticket** — Open positions and new order form
+
+## Managing Your Position
+
+Once your position is open:
+
+1. Go to **Positions** to see all open trades
+2. View your P&L (profit/loss) in real time
+3. Monitor your margin ratio
+4. Set take-profit or stop-loss levels if desired
+5. Close the position at any time by clicking **Close**
+
+## Monitoring Your Portfolio
+
+Visit the **Portfolio** page to:
+
+- View total equity and margin utilization
+- Track collateral balance
+- See historical deposits and withdrawals
+- Monitor overall account health
+
+## Tips for Success
+
+- **Start small** — Test with small positions to learn the interface
+- **Watch liquidation** — Always monitor your liquidation price
+- **Use stops** — Set stop-loss orders to limit downside risk
+- **Check fees** — Understand the fee structure for each market
+- **Study charts** — Use the charting tools to analyze technicals
+
+## Common Questions
+
+**What's the minimum position size?**
+Minimum depends on the market. Check the specific market details.
+
+**Can I transfer positions?**
+Positions are represented as NFTs and can be transferred to other wallets.
+
+**What happens if I get liquidated?**
+Your position is closed at the liquidation price, and your collateral is distributed to liquidity providers and vault participants.
+
+**How do fees work?**
+Fees depend on position size, leverage, and holding time. See the specific market for details.
+
+## Next Steps
+
+Explore more advanced features:
+
+<Columns cols={2}>
+  <Card
+    title="Trade Terminal"
+    icon="chart-line"
+    href="/trading/trade-interface"
+  >
+    Learn advanced trading features and order types.
+  </Card>
+  <Card
+    title="Risk Management"
+    icon="shield"
+    href="/positions/overview"
+  >
+    Master position management and liquidation avoidance.
+  </Card>
+</Columns>

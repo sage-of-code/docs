@@ -1,0 +1,158 @@
+---
+title: Portfolio Overview
+description: "Manage your collateral, equity, and margin"
+---
+
+![Portfolio](/images/portfolio.png)
+
+## Portfolio Page
+
+The Portfolio page is your account command center. Here you can:
+
+- Monitor your collateral balance
+- Track your equity and margin utilization
+- View deposit and withdrawal history
+- Manage your account settings
+
+## Account Balance
+
+### Collateral Balance
+
+Your collateral is your trading capital. It's:
+
+- **Held in the protocol** in secure smart contracts
+- **Yours to control** — Only you can withdraw it
+- **Used as margin** — Supports your leveraged positions
+- **Used for fees** — Pays trading and holding fees
+
+### Total Equity
+
+Total Equity = Collateral + Position P&L
+
+This is your actual account value including open position profits and losses.
+
+### Free Collateral
+
+Free Collateral = Total Equity - Used Margin
+
+This is the amount available to open new positions. When this reaches zero, you're fully deployed.
+
+## Margin Management
+
+### Margin Ratio
+
+Your margin ratio shows your safety distance from liquidation:
+
+```
+Margin Ratio = Free Collateral / Used Margin × 100%
+```
+
+**Interpretation:**
+- **Above 200%** — Safe, comfortable buffer
+- **100-200%** — Caution zone, monitor positions
+- **Below 100%** — Danger zone, liquidation risk
+- **0%** — Liquidation imminent
+
+The yellow line at 100% indicates liquidation level. Cross it and your positions auto-close.
+
+### Position P&L
+
+Your profit or loss on each open position is shown in real time:
+
+- **Unrealized P&L** — Profit/loss if you closed now
+- **Realized P&L** — Profit/loss on closed positions
+
+### Liquidation Price
+
+Each position has a liquidation price. If your margin ratio drops to 0%, liquidation occurs at this price.
+
+## Deposits and Withdrawals
+
+### Depositing Collateral
+
+To deposit:
+
+1. Click **Deposit**
+2. Select the asset (USDC, USDT, etc.)
+3. Enter the amount
+4. Approve the token transfer (first time only)
+5. Confirm the deposit
+6. Wait for blockchain confirmation
+
+Your collateral appears in your account immediately after confirmation.
+
+### Withdrawing Collateral
+
+To withdraw:
+
+1. Click **Withdraw**
+2. Select the asset
+3. Enter the amount (must be ≤ free collateral)
+4. Confirm the withdrawal
+5. Wait for blockchain confirmation
+
+Withdrawals typically take 1-2 minutes to appear in your wallet.
+
+<Warning>
+  You cannot withdraw collateral that's being used as margin for open positions. Close positions first.
+</Warning>
+
+## History
+
+The Portfolio page shows your transaction history:
+
+- **Date** — When the transaction occurred
+- **Type** — Deposit or withdrawal
+- **Amount** — Asset and quantity
+- **Status** — Confirmed, pending, or failed
+- **Tx Hash** — Link to blockchain explorer
+
+Click any transaction to see full details.
+
+## Account Settings
+
+From the Portfolio page, you can:
+
+- View your wallet address
+- Change display preferences
+- Enable/disable features
+- Set notification preferences
+
+## Key Metrics
+
+| Metric | Meaning |
+| :--- | :--- |
+| **Total Equity** | Your actual account value |
+| **Free Collateral** | Available to open new positions |
+| **Used Margin** | Currently locked in open positions |
+| **Margin Ratio** | Distance from liquidation (100% = at risk) |
+| **Unrealized P&L** | Profit/loss if you closed all now |
+| **Realized P&L** | Profit/loss on closed positions |
+
+## Tips for Portfolio Management
+
+1. **Keep margin ratio above 150%** — Gives you a safety buffer
+2. **Monitor free collateral** — Don't get overextended
+3. **Close losing positions early** — Don't wait for recovery
+4. **Take profits regularly** — Lock in gains, withdraw excess
+5. **Track your P&L** — Understand where profits come from
+
+## Staying Safe
+
+- **Never margin call** — Keep buffer above 100%
+- **Use stops** — Automate risk management
+- **Size positions appropriately** — Start small, scale up
+- **Diversify** — Don't put all capital in one market
+- **Plan exits** — Know your exit before entering
+
+## Next Steps
+
+Learn how to manage individual positions:
+
+<Card
+  title="Risk Management"
+  icon="shield"
+  href="/positions/overview"
+>
+  Master position monitoring and liquidation avoidance.
+</Card>

@@ -1,0 +1,101 @@
+---
+title: About LiquidLogos
+description: "Understand the platform architecture and core concepts"
+---
+
+## Platform Overview
+
+LiquidLogos is a UI-first perpetual DEX frontend designed for professional traders. Built on TanStack Start with React 19, it provides a high-performance, responsive trading experience.
+
+### Architecture
+
+The platform is built with:
+
+- **Frontend Framework**: React 19 with TanStack Start and Router
+- **Styling**: Tailwind CSS v4
+- **Code Quality**: Biome (linting, formatting, import ordering)
+- **Runtime**: Bun package manager
+- **Wallet Integration**: wagmi v3 for blockchain interaction
+- **Charts**: Lightweight Charts for technical analysis
+
+### Key Principles
+
+1. **UI-First Design**: Every feature prioritizes user experience and accessibility
+2. **Professional Tools**: Institutional-grade trading interfaces
+3. **Real-Time Data**: Live market data and position tracking
+4. **Self-Custody**: Your funds remain under your control
+5. **Transparent**: All transactions are onchain and auditable
+
+### Core Concepts
+
+#### Perpetual Contracts
+
+Perpetual contracts are futures contracts without an expiration date. On LiquidLogos, you can:
+
+- Trade with leverage up to 100x
+- Go long (buy) or short (sell) any market
+- Hold positions indefinitely
+- Close positions at any time
+
+#### Collateral and Margin
+
+Your collateral serves as:
+
+- **Buffer** against losses
+- **Leverage** for larger positions
+- **Fee payment** vehicle
+
+Your margin ratio indicates how close you are to liquidation. Monitor it closely in the Portfolio page.
+
+#### Liquidation
+
+If your margin ratio falls below the maintenance level, your position is automatically liquidated. The liquidation price is displayed in your Positions view.
+
+#### Vault
+
+The Vault is LiquidLogos's liquidity provision mechanism. Liquidity providers (LPs) deposit capital to:
+
+- **Earn Yield** from trading fees and interest
+- **Support the Protocol** by maintaining solvency
+
+The Vault has two pools:
+- **Buffer Pool**: Handles trader margin
+- **Insurance Pool**: Protects against liquidation losses
+
+### Markets
+
+LiquidLogos offers perpetual trading across multiple asset classes:
+
+- **Crypto** — BTC, ETH, SOL, and more
+- **Stocks** — Traditional equities
+- **Forex** — Currency pairs
+- **Indices** — Broad market indices
+
+Each market has its own liquidity, funding rates, and fee structure.
+
+### State Management
+
+LiquidLogos supports visual state indicators for demonstration and testing:
+
+- `loading` — Data is being fetched
+- `success` — Data loaded successfully
+- `empty` — No data available
+- `partial` — Partial data available
+- `error` — An error occurred
+
+Use the `state` query parameter to preview states:
+```
+https://liquidlogos.app/trade?state=loading
+```
+
+## Next Steps
+
+Ready to get started?
+
+<Card
+  title="Getting Started"
+  icon="rocket"
+  href="/introduction/getting-started"
+>
+  Connect your wallet and open your first position.
+</Card>
