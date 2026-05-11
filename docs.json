@@ -57,11 +57,6 @@
 					"anchor": "App",
 					"href": "https://liquidlogos.app",
 					"icon": "rocket"
-				},
-				{
-					"anchor": "Source",
-					"href": "https://github.com/Lemon-Markets-Perp/liquid-logos",
-					"icon": "github"
 				}
 			]
 		}
@@ -71,12 +66,7 @@
 		"dark": "/logo/dark.svg"
 	},
 	"navbar": {
-		"links": [
-			{
-				"label": "GitHub",
-				"href": "https://github.com/Lemon-Markets-Perp"
-			}
-		],
+		"links": [],
 		"primary": {
 			"type": "button",
 			"label": "Dashboard",
@@ -97,9 +87,7 @@
 	},
 	"footer": {
 		"socials": {
-			"x": "https://x.com/mintlify",
-			"github": "https://github.com/mintlify",
-			"linkedin": "https://linkedin.com/company/mintlify"
+			"x": "https://x.com/mintlify"
 		}
 	}
 }
