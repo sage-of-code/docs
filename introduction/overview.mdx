@@ -5,18 +5,7 @@ description: "Understand the platform architecture and core concepts"
 
 ## Platform Overview
 
-LiquidLogos is a UI-first perpetual DEX frontend designed for professional traders. Built on TanStack Start with React 19, it provides a high-performance, responsive trading experience.
-
-### Architecture
-
-The platform is built with:
-
-- **Frontend Framework**: React 19 with TanStack Start and Router
-- **Styling**: Tailwind CSS v4
-- **Code Quality**: Biome (linting, formatting, import ordering)
-- **Runtime**: Bun package manager
-- **Wallet Integration**: wagmi v3 for blockchain interaction
-- **Charts**: Lightweight Charts for technical analysis
+LiquidLogos is a UI-first perpetual DEX frontend designed for professional traders. It provides institutional-grade trading tools with a clean, intuitive interface.
 
 ### Key Principles
 
@@ -72,21 +61,6 @@ LiquidLogos offers perpetual trading across multiple asset classes:
 - **Indices** — Broad market indices
 
 Each market has its own liquidity, funding rates, and fee structure.
-
-### State Management
-
-LiquidLogos supports visual state indicators for demonstration and testing:
-
-- `loading` — Data is being fetched
-- `success` — Data loaded successfully
-- `empty` — No data available
-- `partial` — Partial data available
-- `error` — An error occurred
-
-Use the `state` query parameter to preview states:
-```
-https://liquidlogos.app/trade?state=loading
-```
 
 ## Next Steps
 

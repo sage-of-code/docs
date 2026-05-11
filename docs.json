@@ -3,9 +3,9 @@
 	"theme": "mint",
 	"name": "LiquidLogos Documentation",
 	"colors": {
-		"primary": "#15803D",
-		"light": "#07C983",
-		"dark": "#166534"
+		"primary": "#014ccb",
+		"light": "#5250e8",
+		"dark": "#0d3fa8"
 	},
 	"favicon": "/favicon.svg",
 	"navigation": {
